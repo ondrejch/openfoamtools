@@ -5,7 +5,8 @@
 # Ondrej Chvala, ondrejch@gmail.com
 #
 #
-command -v foamListTimes >/dev/null && continue || { echo "OpenFOAM not loaded."; exit 1; }
+
+command -v foamListTimes >/dev/null || { echo "OpenFOAM not loaded."; exit 1; }
 
 last_time=$(foamListTimes -latestTime -processor)
 
